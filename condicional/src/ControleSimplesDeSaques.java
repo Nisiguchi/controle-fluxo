@@ -14,16 +14,16 @@ public class ControleSimplesDeSaques {
 
             if (valorSaque == 0) {
                 System.out.println("Transacoes encerradas.");
-                break; // Encerra o loop
-            } else if (valorSaque > limiteDiario) {
+            break; 
+            }
+            else if (valorSaque > limiteDiario) {
                 System.out.println("Limite diario de saque atingido. Transacoes encerradas.");
-                break; // Encerra o loop
-            } else {
-                // TODO: Atualizar o limite diário e imprimir a saída no formato dos exemplos.
+            break; 
+            } 
+            else { limiteDiario = limiteDiario - valorSaque;
+                System.out.println("Saque realizado. Limite restante: " + limiteDiario );
             }
         }
-
-        // Fechar o scanner para evitar vazamentos de recursos
         scanner.close();
     }
 }
